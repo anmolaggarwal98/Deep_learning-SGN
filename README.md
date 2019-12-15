@@ -3,7 +3,7 @@
 #### Candidate Number: 1040706
 
 In recent years, there has been a growing interest in Stochastic Gradient Descent
-(SGD) and its modifications in the field of machine learning, mainly due to its
+(SGD) and its modifications (just as AdaDelta and Adam) in the field of machine learning, mainly due to its
 computational efficiency. It is often assumed that gradient noise follows Gaussian
 distribution in large data-sets by invoking the __classical Central Limit Theorem__.
 However, the results in my report (`will be published here shortly`) shows that this is far from true, in fact we show that
@@ -12,4 +12,8 @@ of heavy tailed distribution where alpha is a tail index. For validation, we bui
 
 * __Does the choice of activation function have a big effect on distribution of SGN?__: for this we run the tests using `ReLu` and `sigmoid` where the implementation can be found in `model_epoch_vs_alpha.py`. I have run a test on the file `test_epoch_alpha_relu.py` where the graphs can be seen in the folder `MNIST_activation`. Please adjust this file accordingly to change the activation function and datasets. All the documentation are provided in the `doc-strings` in the models. 
 
-* __Does the choice of learning rate effect the distribution of SGN?__: for this we run the tests using `ReLu` and `sigmoid` where the implementation can be found in `model_lr_vs_alpha.py`. I have run a test on the file `test_lr_alpha_relu.py` where the graphs can be seen in the folder `MNIST_lr`. 
+* __Does the choice of learning rate effect the distribution of SGN?__: for this we run the tests using `ReLu` and `sigmoid` and we adjust the learning rate from __0.001 to 0.1__ with an increment which is user defined. The implementation can be found in `model_lr_vs_alpha.py`. I have run a test on the file `test_lr_alpha_relu.py` where the graphs can be seen in the folder `MNIST_lr`. 
+
+##### Installation: 
+
+Please feel free to `clone` this repository and play around with the code. I have tried to keep the documentation in the doc strings above the function as understandable as possible.
