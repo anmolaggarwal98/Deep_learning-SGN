@@ -14,7 +14,7 @@ of heavy tailed distribution where alpha is a tail index. For validation, we bui
 
 * __Does the choice of learning rate effect the distribution of SGN?__: for this we run the tests using `ReLu` and `sigmoid` and we adjust the learning rate from __0.001 to 0.1__ with an increment which is user defined. The implementation can be found in `model_lr_vs_alpha.py`. I have run a test on the file `test_lr_alpha.py` where the graphs can be seen in the folder `MNIST_lr`. The jupyter notebook attached for this is `lr_epoch.ipynb`
 
-My report is heavily based on the research paper: `http://proceedings.mlr.press/v97/simsekli19a/simsekli19a.pdf` which you meant find useful to understand what and why I have done this project
+My report is heavily based on the research paper: http://proceedings.mlr.press/v97/simsekli19a/simsekli19a.pdf which you meant find useful to understand what and why I have done this project
 
 ##### Installation: 
 
