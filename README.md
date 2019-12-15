@@ -19,3 +19,12 @@ My report is heavily based on the research paper: `http://proceedings.mlr.press/
 ##### Installation: 
 
 Please feel free to `clone` this repository and play around with the code. I have tried to keep the documentation in the doc strings above the function as understandable as possible.
+
+
+
+
+
+
+
+
+Hope you like it. Enjoy!!!!!!
