@@ -1,6 +1,6 @@
 ## Non - Gaussian Behaviour of Stochastic Gradient Noise in Deep Learning
 
-#### Candidate Number: 1040706
+#### Candidate Number: XXXXXXX
 
 In recent years, there has been a growing interest in Stochastic Gradient Descent
 (SGD) and its modifications (just as AdaDelta and Adam) in the field of machine learning, mainly due to its
