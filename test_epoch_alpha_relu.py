@@ -32,7 +32,7 @@ estimate_alpha_train, estimate_alpha_test = model_alpha(trX, trY, teX, teY,num_e
 
 # save the output in the right directory using pickle format
 # make sure you create an empty folder "MNIST_activation" before running this
-print("make sure you create an empty folder 'MNIST_activation' before running this or else you will get an error msg")
+print("make sure you create an empty folder with exact name 'MNIST_activation' before running this or else you will get an error msg")
 pickle_out = open(f'MNIST_activation/sigmoid_trial_Estimate_alpha_train_epoch{num_epochs}.pickle','wb')  #create a file X.pickle
 pickle.dump(estimate_alpha_train,pickle_out)
 pickle_out.close()

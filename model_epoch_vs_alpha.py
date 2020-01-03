@@ -6,6 +6,8 @@ from estimate_alpha import estimate_alpha_mohammed
 
 import numpy as np
 import time
+from tqdm import tqdm
+#import tqdm
 
 # calculate sigmoid function and its derivative
 sigmoid = lambda x: 1 / (1 + np.exp(-x))
@@ -82,9 +84,9 @@ def model_alpha(trX, trY, teX, teY, num_epochs = 10, learn_rate = 0.1, batch_siz
     estimate_alpha_test = np.zeros(num_epochs)  #to store for test
     train_length = len(trX)
 
-    for k in range(num_epochs):
+    for k in tqdm(range(num_epochs)):
         if (k+1)%5==0:  #prints every 5 iterations
-            print(f'Epoch:{k+1}')
+            tqdm.write(f'Epoch:{k+1}')
 
         #calculating overall gradient jacobian matrix for all dataset
         GD_gradient = grads(trX,trY,weights, activation)[1]
@@ -137,13 +139,13 @@ def model_alpha(trX, trY, teX, teY, num_epochs = 10, learn_rate = 0.1, batch_siz
         estimate_alpha_test[k] = alpha_test_k
 
         if (k+1)%5==0:
-            print(f'alpha_train{k+1}: {alpha_k}')
-            print(f'alpha_test{k+1}: {alpha_test_k}')
+            tqdm.write(f'\nalpha_train{k+1}: {alpha_k}')
+            tqdm.write(f'alpha_test{k+1}: {alpha_test_k}')
 
             # testing on test images
             prediction = np.argmax(feed_forward(teX, weights,activation=activation)[-1], axis=1)
             # calculating accuracy
-            print ('Accuracy',f'{100*np.mean(prediction == np.argmax(teY, axis=1))} %\n')
+            tqdm.write(f'Accuracy: {100*np.mean(prediction == np.argmax(teY, axis=1))} %\n')
 
     return estimate_alpha_train, estimate_alpha_test
 

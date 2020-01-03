@@ -35,7 +35,7 @@ estimate_alpha_train, estimate_alpha_test = model_lr(trX, trY, teX, teY,
 # save the output in the right directory using pickle format
 # make sure you create an empty folder "MNIST_activation" before running this
 
-print("make sure you create an empty folder 'MNIST_lr' before running this or else you will get an error msg\n")
+print("\nmake sure you create an empty folder with the exact name 'MNIST_lr' before running this or else you will get an error msg\n")
 pickle_out = open(f'MNIST_lr/relu_trial_alpha_train_lr{learning_rate_size}.pickle','wb')  #create a file X.pickle
 pickle.dump(estimate_alpha_train,pickle_out)
 pickle_out.close()

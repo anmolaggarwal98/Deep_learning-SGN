@@ -6,6 +6,7 @@ from estimate_alpha import estimate_alpha_mohammed
 
 import numpy as np
 import time
+from tqdm import tqdm
 
 def model_lr(trX, trY, teX, teY,
             num_epochs = 100,
@@ -58,9 +59,9 @@ def model_lr(trX, trY, teX, teY,
     for index,learn_rate in enumerate(learning_rate_list):
         count+=1
         print(f'Iter: {count}')
-        print(f"learning_rate: {learn_rate}")
+        print(f"learning_rate: {learn_rate}\n")
 
-        for k in range(num_epochs):
+        for k in tqdm(range(num_epochs)):
 
             #calculating overall gradient jacobian matrix for all dataset
             GD_gradient = grads(trX,trY,weights,activation)[1]
@@ -109,7 +110,7 @@ def model_lr(trX, trY, teX, teY,
             estimate_alpha_train[index][k] = alpha_k
             estimate_alpha_test[index][k] = alpha_test_k
 
-        print(f'Alpha_train: {estimate_alpha_train[index]}')
+        print(f'\nAlpha_train: {estimate_alpha_train[index]}')
         print(f'Alpha_test: {estimate_alpha_test[index]}\n')
 
     print(f'Estimate alpha mean train per learning rate: \n{np.mean(estimate_alpha_train,axis=1)}')
