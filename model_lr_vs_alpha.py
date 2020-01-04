@@ -58,7 +58,7 @@ def model_lr(trX, trY, teX, teY,
 
     for index,learn_rate in enumerate(learning_rate_list):
         count+=1
-        print(f'Iter: {count}')
+        print(f'Iter: {count}\{num_epochs}')
         print(f"learning_rate: {learn_rate}\n")
 
         for k in tqdm(range(num_epochs)):
